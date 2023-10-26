@@ -7,9 +7,10 @@ interface_name = applications
 [Info]
 execute = bash /usr/share/alterator/scripts/app_info.sh {file}
 stdout_bytes = enabled
+action_id = Info
 
 [List]
 execute = bash /usr/share/alterator/scripts/app_list.sh /usr/share/applications/
 stdout_strings = enabled
-
+action_id = List
 
