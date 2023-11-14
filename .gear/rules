@@ -1,2 +1,2 @@
-spec: .gear/alterator-module-application.spec
+spec: alterator-module-application.spec
 tar: .
