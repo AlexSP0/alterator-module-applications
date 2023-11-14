@@ -13,4 +13,3 @@ action_id = Info
 execute = bash /usr/share/alterator/scripts/app_list.sh /usr/share/applications/
 stdout_strings = enabled
 action_id = List
-
