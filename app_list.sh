@@ -4,7 +4,7 @@ for dir in "${@}"
 do
 	for file in $dir*.desktop
 	do
-		if grep -q "\[X-Alterator Interface .*\]" $file
+		if grep -q "\[Alterator Application .*\]" $file
 		then
 			echo $file
 		fi
