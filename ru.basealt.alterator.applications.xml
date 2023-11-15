@@ -8,7 +8,10 @@
             <arg type="i" name="response" direction="out"></arg>
         </method>
         <method name="Info">
-            <arg type="s" name="file" direction="in"></arg>			
+            <arg type="s" name="file" direction="in"></arg>
+            <arg type="ay" name="stdout_bytes" direction="out"></arg>
+            <arg type="i" name="response" direction="out"></arg>
         </method>
     </interface>
 </node>
+
