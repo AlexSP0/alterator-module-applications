@@ -1,15 +1,15 @@
 [Manager]
 module_name = executor
-node_name = applications
+node_name = global
 
 interface_name = applications
 
 [Info]
-execute = bash /usr/share/alterator/scripts/app_info.sh {file}
+execute = sh /usr/share/alterator/scripts/app-info.sh {name}
 stdout_bytes = enabled
 action_id = Info
 
 [List]
-execute = bash /usr/share/alterator/scripts/app_list.sh /usr/share/applications/
+execute = sh /usr/share/alterator/scripts/list-categories.sh
 stdout_strings = enabled
 action_id = List
