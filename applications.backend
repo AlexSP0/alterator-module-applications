@@ -10,6 +10,6 @@ stdout_bytes = enabled
 action_id = Info
 
 [List]
-execute = sh /usr/share/alterator/scripts/list-categories.sh
+execute = sh /usr/share/alterator/scripts/list-apps.sh
 stdout_strings = enabled
 action_id = List
