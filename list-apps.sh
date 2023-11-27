@@ -2,6 +2,8 @@
 
 apps_dir="/usr/share/applications"
 
-grep -s -l -e "\[Alterator Entry\]" $apps_dir/* |
-	xargs sed "/\[Alterator Entry\]/,\$!d" |
-	sed -n -e "s/^\s*Name\s*=\s*\(.*\)/\1/p"
+grep -s -l -e "\[Alterator Entry\]" -r $apps_dir | while read -r file; do
+	sed "/\[Alterator Entry\]/,\$!d" "$file" |
+		sed -n -e "s/^\s*Name\s*=\s*\(.*\)/\1/p" |
+		head -n 1
+done
