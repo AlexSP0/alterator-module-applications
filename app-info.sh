@@ -5,8 +5,12 @@
 apps_dir="/usr/share/applications"
 app=$1
 
-file=$(find $apps_dir -type f -exec grep -l -e "^\s*Name\s*=\s*$app" {} \+)
+grep -s -l -e "\[Alterator Entry\]" -r $apps_dir | while read -r file; do
+	name=$(sed "/\[Alterator Entry\]/,\$!d" "$file" |
+		sed -n -e "s/^\s*Name\s*=\s*\(.*\)/\1/p" |
+		head -n 1)
 
-[ -z $file ] && exit 1
+	[ "$name" = "$app" ] && cat $file && exit 0
+done
 
-cat $file
+exit 1
