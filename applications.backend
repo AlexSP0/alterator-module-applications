@@ -1,8 +1,8 @@
-[Manager]
-module_name = executor
-node_name = global
-
-interface_name = applications
+[Alterator Entry]
+Type = Backend
+Module = executor
+Name = global
+Interface = applications
 
 [Info]
 execute = sh /usr/share/alterator/objects/global/scripts/app-info.sh {name}

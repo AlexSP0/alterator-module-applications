@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/sh -e
 
-apps_dir="/usr/share/applications"
+apps_dir="/usr/share/alterator/applications"
 
 grep -s -l -e "\[Alterator Entry\]" -r $apps_dir | while read -r file; do
 	sed "/\[Alterator Entry\]/,\$!d" "$file" |
