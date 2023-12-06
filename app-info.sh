@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/sh -e
 
 [ $# -ne 1 ] && echo "Usage: $0 <app-name>" && exit 1
 
-apps_dir="/usr/share/applications"
+apps_dir="/usr/share/alterator/applications"
 app=$(echo "$1" | xargs)
 
 tmpfile=$(mktemp /tmp/alterator-global-app-info.XXXXXX)
