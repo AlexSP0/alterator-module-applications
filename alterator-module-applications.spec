@@ -1,13 +1,13 @@
 %define _unpackaged_files_terminate_build 1
 
-Name: alterator-module-application
+Name: alterator-module-applications
 Version: 0.1.0
 Release: alt1
 
 Summary: Local applications interface for alterator browser.
 License: GPLv2+
 Group: Other
-URL: https://github.com/AlexSP0/alterator-module-application
+URL: https://github.com/AlexSP0/alterator-module-applications
 
 BuildArch: noarch
 
@@ -26,7 +26,7 @@ mkdir -p %buildroot%_datadir/alterator/backends
 mkdir -p %buildroot%_datadir/alterator/objects/global/scripts
 
 install -v -p -m 644 -D ru.basealt.alterator.applications.xml %buildroot%_datadir/dbus-1/interfaces
-install -v -p -m 644 -D 49-alterator-module-application.rules %buildroot%_sysconfdir/polkit-1/rules.d
+install -v -p -m 644 -D 49-alterator-module-applications.rules %buildroot%_sysconfdir/polkit-1/rules.d
 install -v -p -m 644 -D applications.backend %buildroot%_datadir/alterator/backends
 install -v -p -m 755 -D *.sh %buildroot%_datadir/alterator/objects/global/scripts
 
@@ -34,7 +34,7 @@ install -v -p -m 755 -D *.sh %buildroot%_datadir/alterator/objects/global/script
 %_datadir/alterator/backends/*.backend
 %_datadir/alterator/objects/global/scripts/*.sh
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.applications.xml
-%_sysconfdir/polkit-1/rules.d/49-alterator-module-application.rules
+%_sysconfdir/polkit-1/rules.d/49-alterator-module-applications.rules
 
 %changelog
 * Tue Oct 24 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt1
