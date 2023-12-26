@@ -5,11 +5,11 @@ Name = global
 Interface = applications
 
 [Info]
-execute = sh /usr/share/alterator/objects/global/scripts/app-info.sh {name}
+execute = sh /usr/lib/alterator-module-applications/alterator/app-info {name}
 stdout_bytes = enabled
 action_id = Info
 
 [List]
-execute = sh /usr/share/alterator/objects/global/scripts/list-apps.sh
+execute = sh /usr/lib/alterator-module-applications/alterator/list-apps
 stdout_strings = enabled
 action_id = List
