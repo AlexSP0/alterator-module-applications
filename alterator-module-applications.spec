@@ -33,6 +33,7 @@ install -v -p -m 755 -D list-apps %buildroot%_libexecdir/%name
 
 %files
 %_sysconfdir/alterator/backends/*.backend
+%dir %_libexecdir/%name
 %_libexecdir/%name/app-info
 %_libexecdir/%name/list-apps
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.applications.xml
